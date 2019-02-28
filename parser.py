@@ -14,11 +14,8 @@ def parse(file):
         diccionario["num_fotos"] = N
         for i in range(N):
             foto = f.readline().strip().split(" ")
-            print(foto)
             orientacion = foto[0]
             tags = foto[2:]
-
             fotos[orientacion][i] = tags
 
-        print (fotos)
-        return N, fotos
+    return N, fotos
