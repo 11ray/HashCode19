@@ -20,3 +20,23 @@ def matriz_vertical():
         c1 +=1
 
     return mat_v
+
+def maximo_vertical():
+    maximos_v = []
+    vertical = fotos["V"]
+    lista_v = list(vertical)
+    mat_v = matriz_vertical()
+    mat_v = np.matrix(mat_v)
+    while mat_v.max() >= 0:
+        result = np.where(mat_v == np.max(mat_v))
+        x = result[0][0]
+        y = result[1][0]
+        #valor = mat_v[x ,y]
+        mat_v[x] = -np.inf
+        mat_v[y] = -np.inf
+        foto1 = lista_v[x]
+        foto2 = lista_v[y]
+        pareja = [foto1, foto2]
+        maximos_v.append(pareja)
+
+    return maximos_v
