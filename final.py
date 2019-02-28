@@ -120,7 +120,11 @@ def resultado(resultados, file):
 
 
 if __name__ == '__main__':
+    #file = "files/a_example.txt"
     file = "files/b_lovely_landscapes.txt"
+    #file = "files/c_memorable_moments.txt"
+    #file = "files/d_pet_pictures.txt"
+    #file = "files/e_shiny_selfies.txt"
     num_fotos, fotos = parse(file)
     print("Generando matriz vertical:")
     matV = matriz_vertical()
