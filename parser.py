@@ -19,3 +19,14 @@ def parse(file):
             fotos[orientacion][i] = tags
 
     return N, fotos
+
+def resultado(resultados, file):
+    with open(file, "w") as f:
+        f.write(str(len(resultados)) + "\n")
+        for item in resultados:
+            if type(item)== list:
+                for i in item:
+                    r = str(item[0]) + " " + str(item[1])
+            else:
+                r = str(item)
+            f.write(r + "\n")
